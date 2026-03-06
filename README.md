@@ -36,6 +36,20 @@ You will need at least Cmake 3.12 and a compatible platform listed below:
 
 ### Defaults controls :
 
+| Input | Gameboy Controll |
+| --- | --- |
+| A | A |
+| Z | B |
+| S | Start |
+| D | Select |
+| I | Up |
+| J | Down |
+| K | Left |
+| L | Right |
+
+Currently the only way to change the mapping on the gamepad is to directly modify the "ui.c" file in the "ui_on_key()" function.
+
+
 ## Author
 
 - [@AdamAkhrouf](https://www.github.com/adamiexe)

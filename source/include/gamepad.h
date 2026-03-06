@@ -13,7 +13,6 @@ typedef struct {
     bool right;
 } gamepad_state;
 
-void gamepad_init();
 bool gamepad_button_sel();
 bool gamepad_dir_sel();
 void gamepad_set_sel(u8 value);

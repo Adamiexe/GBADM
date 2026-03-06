@@ -15,7 +15,7 @@ No additional downloads are required for these libraries. Ensure the folder stru
 
 ## Compilation
 
-You will need to copy the PRHI files (/src+/include+/library) into your projects or compile the static library
+You will need at least Cmake 3.12 and a compatible platform listed below:
 
 ## Supported Platforms
 
@@ -26,6 +26,15 @@ You will need to copy the PRHI files (/src+/include+/library) into your projects
 | Android | NO |
 | IOS | NO |
 | MAC | NO |
+
+## Quick Use
+
+### Once compiled you need to:
+
+- create a rom folder with your rom in the .gb or .gbc format 
+- run GBADM
+
+### Defaults controls :
 
 ## Author
 

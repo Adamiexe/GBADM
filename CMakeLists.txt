@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.12)
+
+project(GBADMI C)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/GBADM)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/GBADM)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/GBADM)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "source/src/*.c")
+file(GLOB_RECURSE HEADERS CONFIGURE_DEPENDS "source/include/*.h")
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+target_include_directories(${PROJECT_NAME} PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/source/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/Library/SDL/include
+)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _CONSOLE)
+target_link_directories(${PROJECT_NAME} PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/Library/lib
+)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE SDL2)
